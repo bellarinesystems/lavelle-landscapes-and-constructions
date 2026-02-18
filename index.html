@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lavelle Landscapes & Constructions — premium paving, pool surrounds & landscaping across Geelong, Torquay & the Surf Coast. Call Jaryd for a free quote.">
+<title>Lavelle Landscapes and Constructions | Premium Landscaping & Paving Geelong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--blue-900:#0b2545;
+--blue-700:#134074;
+--blue-600:#1a5096;
+--blue-500:#2170c0;
+--blue-400:#4a90d9;
+--blue-100:#d6e6f7;
+--blue-50:#edf4fb;
+--warm-grey-100:#f5f3f0;
+--warm-grey-200:#e8e4df;
+--warm-grey-500:#8a8279;
+--warm-grey-700:#5c564e;
+--white:#ffffff;
+--text-dark:#1a1a2e;
+--text-body:#3d3d4e;
+--radius:12px;
+--radius-lg:20px;
+--shadow-sm:0 2px 8px rgba(11,37,69,0.06);
+--shadow-md:0 8px 24px rgba(11,37,69,0.1);
+--shadow-lg:0 16px 48px rgba(11,37,69,0.14);
+--transition:0.3s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-body);line-height:1.7;overflow-x:hidden;background:var(--white)}
+h1,h2,h3,h4,h5,h6{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text-dark);line-height:1.2}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ===== NAVBAR ===== */
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,37,69,0.06);padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow var(--transition)}
+.navbar.scrolled{box-shadow:var(--shadow-sm)}
+.nav-brand{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.25rem;color:var(--blue-700);display:flex;align-items:center;gap:0.5rem}
+.nav-brand-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--blue-500),var(--blue-700));border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.925rem;font-weight:500;color:var(--text-body);transition:color var(--transition);padding:0.25rem 0;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--blue-500);transition:width var(--transition)}
+.nav-links a:hover{color:var(--blue-700)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--blue-600);color:white!important;padding:0.6rem 1.4rem;border-radius:8px;font-weight:600;font-size:0.9rem;transition:all var(--transition)}
+.nav-cta:hover{background:var(--blue-700);transform:translateY(-1px)}
+.nav-cta::after{display:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:1001}
+.hamburger span{width:26px;height:2.5px;background:var(--blue-700);border-radius:2px;transition:all var(--transition)}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+.mobile-nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--warm-grey-200);padding:1.5rem 2rem;flex-direction:column;gap:0.5rem;box-shadow:var(--shadow-md)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{padding:0.75rem 0;font-size:1rem;font-weight:500;color:var(--text-body);border-bottom:1px solid var(--warm-grey-100)}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav .nav-cta-mobile{display:inline-block;background:var(--blue-600);color:white;text-align:center;padding:0.85rem 1.5rem;border-radius:8px;font-weight:600;margin-top:0.5rem}
+
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:flex}
+}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(160deg,var(--blue-900) 0%,var(--blue-700) 40%,var(--blue-600) 70%,var(--blue-400) 100%);padding:6rem 2rem 4rem}
+.hero-bg-pattern{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hero-bg-pattern svg{position:absolute;width:100%;height:100%}
+.hero-grid-overlay{position:absolute;inset:0;background-image:
+  radial-gradient(circle at 20% 80%,rgba(255,255,255,0.04) 0%,transparent 50%),
+  radial-gradient(circle at 80% 20%,rgba(255,255,255,0.06) 0%,transparent 50%),
+  radial-gradient(circle at 60% 60%,rgba(255,255,255,0.03) 0%,transparent 40%);
+}
+.hero-shapes{position:absolute;inset:0;pointer-events:none}
+.hero-shape{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,0.08)}
+.hero-shape-1{width:400px;height:400px;top:-100px;right:-50px;border-width:2px;border-color:rgba(255,255,255,0.05)}
+.hero-shape-2{width:600px;height:600px;bottom:-200px;left:-150px;border-color:rgba(255,255,255,0.04)}
+.hero-shape-3{width:200px;height:200px;top:30%;right:10%;background:rgba(255,255,255,0.02)}
+.hero-diamond{position:absolute;width:80px;height:80px;border:1px solid rgba(255,255,255,0.1);transform:rotate(45deg);top:20%;left:8%}
+.hero-diamond-2{position:absolute;width:40px;height:40px;border:1px solid rgba(255,255,255,0.07);transform:rotate(45deg);bottom:25%;right:20%}
+.hero-content{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
+.hero-text{color:white}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.85rem;font-weight:500;margin-bottom:2rem;backdrop-filter:blur(4px)}
+.hero-badge i{color:var(--blue-100)}
+.hero-text h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;line-height:1.1;margin-bottom:1.5rem;color:white}
+.hero-text h1 span{background:linear-gradient(135deg,#7ec8f0,#a8d8ea);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-text p{font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.8;opacity:0.88;margin-bottom:2.5rem;max-width:540px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:1rem;transition:all var(--transition);cursor:pointer;border:2px solid transparent;min-height:48px}
+.btn-primary{background:white;color:var(--blue-700);border-color:white}
+.btn-primary:hover{background:var(--blue-50);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.btn-secondary{background:transparent;color:white;border-color:rgba(255,255,255,0.4)}
+.btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:white;transform:translateY(-2px)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-card-stack{position:relative;width:100%;max-width:420px}
+.hero-feature-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-lg);padding:2rem;color:white;margin-bottom:1rem}
+.hero-feature-card:last-child{margin-bottom:0}
+.hero-feature-card .card-icon{width:48px;height:48px;background:rgba(255,255,255,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem}
+.hero-feature-card h3{font-size:1.1rem;margin-bottom:0.4rem;color:white}
+.hero-feature-card p{font-size:0.88rem;opacity:0.75;line-height:1.5}
+
+@media(max-width:768px){
+.hero{min-height:auto;padding:5rem 1.5rem 3rem}
+.hero-content{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+.hero-text p{margin-left:auto;margin-right:auto}
+.hero-btns{justify-content:center}
+.hero-visual{display:none}
+.hero-badge{margin-left:auto;margin-right:auto}
+}
+@media(max-width:480px){
+.hero{padding:4rem 1rem 2.5rem}
+.hero-btns{flex-direction:column;align-items:stretch}
+.btn{justify-content:center}
+}
+
+/* ===== SECTION COMMON ===== */
+.section{padding:5rem 2rem}
+.section-narrow{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-header h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:0.75rem}
+.section-header p{font-size:1.05rem;color:var(--warm-grey-700);max-width:600px;margin:0 auto}
+.section-label{display:inline-flex;align-items:center;gap:0.4rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:0.85rem;color:var(--blue-500);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
+.section-label i{font-size:0.75rem}
+.bg-warm{background:var(--warm-grey-100)}
+.bg-blue-light{background:var(--blue-50)}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:4rem;align-items:start}
+.about-text h2{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:1.5rem}
+.about-text p{font-size:1.05rem;line-height:1.85;color:var(--text-body)}
+.about-text .highlight-line{display:flex;align-items:center;gap:0.75rem;margin-top:1.5rem;padding:1.25rem 1.5rem;background:var(--blue-50);border-left:4px solid var(--blue-500);border-radius:0 8px 8px 0;font-weight:500;color:var(--blue-700)}
+.stats-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.stat-card{background:white;border-radius:var(--radius);padding:1.8rem;text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--warm-grey-200);transition:all var(--transition)}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.stat-number{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:800;color:var(--blue-600);margin-bottom:0.3rem}
+.stat-label{font-size:0.9rem;font-weight:500;color:var(--warm-grey-700)}
+
+@media(max-width:768px){
+.about-grid{grid-template-columns:1fr;gap:2.5rem}
+.stats-grid{grid-template-columns:repeat(3,1fr);gap:0.75rem}
+.stat-card{padding:1.2rem}
+.stat-number{font-size:1.6rem}
+}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr}
+}
+
+/* ===== SERVICES ===== */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:white;border-radius:var(--radius-lg);padding:2.2rem;border:1px solid var(--warm-grey-200);transition:all var(--transition);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue-500),var(--blue-400));transform:scaleX(0);transform-origin:left;transition:transform var(--transition)}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--blue-100)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:56px;height:56px;background:var(--blue-50);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;color:var(--blue-600);font-size:1.3rem;transition:all var(--transition)}
+.service-card:hover .service-icon{background:var(--blue-600);color:white}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:0.75rem}
+.service-card p{font-size:0.92rem;line-height:1.7;color:var(--warm-grey-700)}
+
+@media(max-width:768px){
+.services-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+}
+@media(max-width:480px){
+.services-grid{grid-template-columns:1fr}
+}
+
+/* ===== WHY CHOOSE US ===== */
+.selling-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.selling-card{display:flex;gap:1.25rem;padding:2rem;border-radius:var(--radius-lg);background:white;border:1px solid var(--warm-grey-200);transition:all var(--transition)}
+.selling-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.selling-icon{width:52px;height:52px;min-width:52px;background:linear-gradient(135deg,var(--blue-600),var(--blue-400));border-radius:14px;display:flex;align-items:center;justify-content:center;color:white;font-size:1.1rem}
+.selling-card h3{font-size:1.05rem;font-weight:700;margin-bottom:0.4rem}
+.selling-card p{font-size:0.92rem;line-height:1.65;color:var(--warm-grey-700)}
+
+@media(max-width:768px){
+.selling-grid{grid-template-columns:1fr;gap:1rem}
+.selling-card{padding:1.5rem}
+}
+
+/* ===== PROCESS ===== */
+.process-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-timeline::before{content:'';position:absolute;top:40px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:3px;background:var(--blue-100);z-index:0}
+.process-step{text-align:center;position:relative;z-index:1;padding:0 1rem}
+.step-number{width:56px;height:56px;background:white;border:3px solid var(--blue-500);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.2rem;color:var(--blue-600);margin:0 auto 1.25rem;position:relative;transition:all var(--transition)}
+.process-step:hover .step-number{background:var(--blue-600);color:white;border-color:var(--blue-600);transform:scale(1.1)}
+.process-step h3{font-size:1.05rem;font-weight:700;margin-bottom:0.5rem}
+.process-step p{font-size:0.88rem;line-height:1.65;color:var(--warm-grey-700)}
+
+@media(max-width:768px){
+.process-timeline{grid-template-columns:1fr;gap:2rem}
+.process-timeline::before{display:none}
+.process-step{display:grid;grid-template-columns:56px 1fr;gap:1.25rem;text-align:left;padding:0}
+.step-number{margin:0}
+.process-step-content{padding-top:0.25rem}
+}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:0.75rem}
+.faq-item{background:white;border:1px solid var(--warm-grey-200);border-radius:var(--radius);overflow:hidden;transition:all var(--transition)}
+.faq-item:hover{border-color:var(--blue-100)}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:1.02rem;color:var(--text-dark);gap:1rem;min-height:48px;background:none;border:none;width:100%;text-align:left}
+.faq-question:hover{color:var(--blue-600)}
+.faq-icon{width:32px;height:32px;min-width:32px;background:var(--blue-50);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:all var(--transition);font-size:0.85rem;color:var(--blue-600)}
+.faq-item.active .faq-icon{background:var(--blue-600);color:white;transform:rotate(180deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease}
+.faq-answer-inner{padding:0 1.5rem 1.25rem;font-size:0.95rem;line-height:1.8;color:var(--warm-grey-700)}
+.faq-item.active .faq-answer{max-height:300px}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testimonial-card{background:white;border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--warm-grey-200);position:relative;transition:all var(--transition)}
+.testimonial-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.testimonial-card::before{content:'\201C';position:absolute;top:1rem;right:1.5rem;font-size:4rem;font-family:Georgia,serif;color:var(--blue-100);line-height:1}
+.testimonial-stars{color:#f5a623;font-size:0.95rem;margin-bottom:1rem;display:flex;gap:2px}
+.testimonial-card p{font-size:0.92rem;line-height:1.75;color:var(--text-body);margin-bottom:1.25rem;position:relative;z-index:1}
+.testimonial-author{display:flex;align-items:center;gap:0.75rem}
+.author-avatar{width:40px;height:40px;background:linear-gradient(135deg,var(--blue-400),var(--blue-600));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.9rem}
+.author-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:0.95rem;color:var(--text-dark)}
+
+@media(max-width:768px){
+.testimonials-grid{grid-template-columns:1fr;gap:1rem}
+}
+
+/* ===== HOURS & LOCATION ===== */
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.hours-list{display:flex;flex-direction:column;gap:0}
+.hours-row{display:flex;justify-content:space-between;padding:0.85rem 0;border-bottom:1px solid var(--warm-grey-200);font-size:0.95rem}
+.hours-row:last-child{border-bottom:none}
+.hours-day{font-weight:600;color:var(--text-dark)}
+.hours-time{color:var(--warm-grey-700)}
+.map-container{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--warm-grey-200);aspect-ratio:4/3;background:var(--warm-grey-100)}
+.map-container iframe{width:100%;height:100%;border:0}
+
+@media(max-width:768px){
+.location-grid{grid-template-columns:1fr;gap:2rem}
+.map-container{aspect-ratio:16/10}
+}
+
+/* ===== CONTACT ===== */
+.contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-cta-box{background:linear-gradient(135deg,var(--blue-700),var(--blue-500));border-radius:var(--radius-lg);padding:3rem;color:white;display:flex;flex-direction:column;justify-content:center}
+.contact-cta-box h3{font-size:1.8rem;font-weight:800;color:white;margin-bottom:1rem}
+.contact-cta-box p{opacity:0.88;margin-bottom:2rem;line-height:1.7}
+.call-btn{display:inline-flex;align-items:center;gap:0.75rem;background:white;color:var(--blue-700);padding:1.1rem 2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.1rem;transition:all var(--transition);min-height:48px}
+.call-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.call-btn i{font-size:1.2rem}
+.contact-details{margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem}
+.contact-detail-row{display:flex;align-items:center;gap:0.75rem;opacity:0.88;font-size:0.95rem}
+.contact-detail-row i{width:20px;text-align:center}
+.contact-form{display:flex;flex-direction:column;gap:1.25rem}
+.form-group label{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:0.9rem;color:var(--text-dark);margin-bottom:0.4rem}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.85rem 1rem;border:1.5px solid var(--warm-grey-200);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.95rem;transition:all var(--transition);background:var(--white);color:var(--text-dark);min-height:48px}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(33,112,192,0.1)}
+.form-submit{background:var(--blue-600);color:white;border:none;padding:1rem 2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:1rem;cursor:pointer;transition:all var(--transition);min-height:48px}
+.form-submit:hover{background:var(--blue-700);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+@media(max-width:768px){
+.contact-wrapper{grid-template-columns:1fr;gap:2rem}
+.contact-cta-box{padding:2rem}
+}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--blue-900);color:rgba(255,255,255,0.75);padding:4rem 2rem 2rem}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer h4{font-family:'Plus Jakarta Sans',sans-serif;color:white;font-size:1.1rem;font-weight:700;margin-bottom:1rem}
+.footer p{font-size:0.9rem;line-height:1.7}
+.footer-brand{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;color:white;margin-bottom:0.75rem}
+.footer-links{display:flex;flex-direction:column;gap:0.5rem}
+.footer-links a{font-size:0.9rem;transition:color var(--transition);padding:0.2rem 0}
+.footer-links a:hover{color:white}
+.footer-contact-item{display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;margin-bottom:0.5rem}
+.footer-contact-item i{width:18px;text-align:center;color:var(--blue-400)}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;text-align:center;font-size:0.85rem}
+
+@media(max-width:768px){
+.footer-grid{grid-template-columns:1fr;gap:2rem}
+}
+
+/* ===== SCROLL ANIMATION (CSS-only, starts visible) ===== */
+.fade-up{transform:translateY(20px);animation:fadeUp 0.6s ease forwards}
+@keyframes fadeUp{to{transform:translateY(0)}}
+.fade-up:nth-child(2){animation-delay:0.1s}
+.fade-up:nth-child(3){animation-delay:0.2s}
+.fade-up:nth-child(4){animation-delay:0.3s}
+.fade-up:nth-child(5){animation-delay:0.4s}
+
+/* ===== UTILITY ===== */
+.section-divider{width:60px;height:4px;background:linear-gradient(90deg,var(--blue-500),var(--blue-400));border-radius:2px;margin:0 auto 1rem}
+@media(max-width:480px){
+.section{padding:3rem 1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-brand">
+    <div class="nav-brand-icon"><i class="fas fa-leaf"></i></div>
+    Lavelle Landscapes
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="#testimonials" class="mobile-link">Reviews</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="tel:0458176386" class="nav-cta-mobile">Call Jaryd — 0458 176 386</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern">
+    <svg viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <pattern id="heroGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#heroGrid)"/>
+      <circle cx="1100" cy="200" r="250" fill="rgba(255,255,255,0.02)"/>
+      <circle cx="200" cy="600" r="180" fill="rgba(255,255,255,0.015)"/>
+    </svg>
+  </div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-shapes">
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-shape hero-shape-3"></div>
+    <div class="hero-diamond"></div>
+    <div class="hero-diamond-2"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fas fa-award"></i> Trusted Across Geelong & the Surf Coast</div>
+      <h1>Premium Landscaping & Paving That <span>Transforms Geelong Homes</span></h1>
+      <p>Lavelle Landscapes and Constructions delivers meticulous craftsmanship across Geelong, the Bellarine, and the Surf Coast — from stunning pool surrounds to complete outdoor transformations that you'll enjoy for decades.</p>
+      <div class="hero-btns">
+        <a href="tel:0458176386" class="btn btn-primary"><i class="fas fa-phone"></i> Call Jaryd on 0458 176 386</a>
+        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Request a Free Quote</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-feature-card">
+          <div class="card-icon"><i class="fas fa-star"></i></div>
+          <h3>5-Star Craftsmanship</h3>
+          <p>Every client rates our attention to detail as the best they've found.</p>
+        </div>
+        <div class="hero-feature-card">
+          <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Built to Last</h3>
+          <p>We use the right materials and techniques for coastal Geelong conditions.</p>
+        </div>
+        <div class="hero-feature-card">
+          <div class="card-icon"><i class="fas fa-user"></i></div>
+          <h3>Deal Direct with Jaryd</h3>
+          <p>One tradie, start to finish — no runaround, no surprises.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section bg-warm" id="about">
+  <div class="section-narrow">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label"><i class="fas fa-circle"></i> About Us</div>
+        <h2>Built on Detail, Driven by Pride</h2>
+        <p>Lavelle Landscapes and Constructions is led by Jaryd, a hands-on tradesman who genuinely cares about getting every detail right. Based in Grovedale, we work across Geelong, Torquay, Ocean Grove, and surrounding areas — specialising in paving, pool areas, retaining walls, and complete outdoor makeovers. Our clients consistently tell us the same thing: the attention to detail and workmanship is the best they've found. From the very first quote through to the final clean-up, we keep things honest, professional, and straightforward — because that's how we'd want to be treated on our own property.</p>
+        <div class="highlight-line">
+          <i class="fas fa-check-circle"></i>
+          <span>Locally owned and operated in Grovedale, serving all of Greater Geelong</span>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">5★</div>
+          <div class="stat-label">Client Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Recommendation Rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Focus: Quality Over Volume</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> What We Do</div>
+      <h2>Our Landscaping Services</h2>
+      <p>From precision paving to complete backyard transformations — every project gets the same obsessive attention to detail.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Paving & Relaying</h3>
+        <p>From new paved entertaining areas to relaying large existing sections, we handle every type of paving project with precision. Whether it's a driveway, courtyard, or garden path, we ensure proper drainage, solid base preparation, and a flawless finish.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-water"></i></div>
+        <h3>Pool Surrounds & Travertine Repairs</h3>
+        <p>We specialise in pool area transformations — including cracked travertine repairs, resealing, and complete pool surround installations. Your pool area cops a beating from the elements, so we use the right techniques and materials to ensure it lasts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-cubes"></i></div>
+        <h3>Retaining Walls & Structural Work</h3>
+        <p>Geelong's varied terrain often demands smart retaining wall solutions to create usable outdoor space. We design and build retaining walls that are structurally sound, compliant with Australian Standards, and look like they belong on your property.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Complete Landscape Transformations</h3>
+        <p>We take tired, underused backyards and turn them into outdoor spaces you'll actually want to spend time in. From concept through to planting, lighting, and finishing touches, we manage the whole project so you deal with one person — Jaryd.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-fire"></i></div>
+        <h3>Outdoor Entertainment Areas</h3>
+        <p>Geelong weather is made for entertaining outdoors, and we build the spaces to match — think alfresco areas, fire pits, and decking. Every project is tailored to how your family actually lives, not pulled from a template.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="section bg-blue-light" id="why-us">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> Why Lavelle</div>
+      <h2>Why Choose Us</h2>
+      <p>Here's what sets Lavelle Landscapes apart from the rest.</p>
+    </div>
+    <div class="selling-grid">
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div>
+          <h3>Obsessive Attention to Detail</h3>
+          <p>Jaryd doesn't cut corners. Clients regularly describe the workmanship as the best they've found — and that's because every edge, every level, and every joint matters to us.</p>
+        </div>
+      </div>
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-handshake"></i></div>
+        <div>
+          <h3>Honest Quotes, No Surprises</h3>
+          <p>You'll get a clear, reasonable quote upfront — often within days of your first call. We don't pad prices or spring hidden costs on you halfway through a job.</p>
+        </div>
+      </div>
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-user-check"></i></div>
+        <div>
+          <h3>One Tradie, Start to Finish</h3>
+          <p>When you hire Lavelle Landscapes, you deal directly with Jaryd from the first conversation to the final walkthrough. There's no runaround with office staff or subcontractors you've never met.</p>
+        </div>
+      </div>
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div>
+          <h3>Local to Geelong & the Surf Coast</h3>
+          <p>We're based in Grovedale and work right across the Geelong region, Torquay, Barwon Heads, and beyond. We understand local soil conditions, council requirements, and what materials hold up in our coastal climate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section" id="process">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> How It Works</div>
+      <h2>Our Simple 4-Step Process</h2>
+      <p>From first call to finished project — here's how we make it easy.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <div class="process-step-content">
+          <h3>Get in Touch</h3>
+          <p>Give Jaryd a call or send a message — he'll have a chat about what you're after and arrange a time to come out and take a look.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <div class="process-step-content">
+          <h3>On-Site Quote</h3>
+          <p>Jaryd visits your property to assess the space, discuss your ideas, and provide a clear, detailed quote — usually within days.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <div class="process-step-content">
+          <h3>Build with Precision</h3>
+          <p>Once you're happy with the plan, work begins — with consistent communication, a tidy worksite, and the meticulous attention to detail our clients always mention.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <div class="process-step-content">
+          <h3>Walk Through & Enjoy</h3>
+          <p>We walk through the finished project together to make sure every detail meets your expectations before we pack up and hand over your transformed outdoor space.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section bg-warm" id="testimonials">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> Client Reviews</div>
+      <h2>What Our Clients Have to Say</h2>
+      <p>Don't just take our word for it — here's what real Geelong homeowners say about working with Jaryd.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>"I absolutely cannot recommend Jaryd highly enough. By far the best person I could have got to do my landscaping in Torquay. The attention to detail and workmanship is probably the best you will find"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div class="author-name">Sue Sheppard</div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>"From the first point of contact with Jaryd from initial quote to finished paving relaying of large area has been an absolute pleasure. Such a genuine professional honest hard working young man."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div class="author-name">Peggy Edwards</div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>"I reached out to Jaryd to fix some travertine pool paving which had cracked and broken, and to seal the pool paving. Jaryd came by within days to provide a very reasonable quote so he got the business."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div class="author-name">Paul Basquille</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>Got questions? Here are the answers to the ones we hear most often.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What areas do you service around Geelong?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We're based in Grovedale and work right across the Geelong region including Torquay, Ocean Grove, Barwon Heads, Belmont, Highton, Waurn Ponds, and surrounding areas. If you're unsure whether we cover your area, just give Jaryd a call and he'll let you know.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can you repair or relay existing paving and travertine?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely — repair and relaying work is one of our specialties. Whether you've got cracked travertine around your pool, uneven pavers from tree roots, or a large area that needs a complete relay, we can assess the situation and provide a solution that lasts. We also offer sealing to protect your investment.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How long does a typical landscaping project take?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">It depends on the scope — a paving relay or pool surround repair might take a few days, while a full backyard transformation could take a couple of weeks. Jaryd will give you a realistic timeframe during the quoting stage so you can plan accordingly.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do I need council approval for my landscaping project?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Some projects — particularly retaining walls over a certain height or work near property boundaries — may require council permits in the City of Greater Geelong or Surf Coast Shire. We're familiar with local requirements and can advise you on what's needed before any work begins.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS & LOCATION ===== -->
+<section class="section bg-blue-light" id="location">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> Find Us</div>
+      <h2>Hours & Location</h2>
+      <p>We're local to Grovedale and available 7 days a week.</p>
+    </div>
+    <div class="location-grid">
+      <div>
+        <h3 style="font-size:1.2rem;margin-bottom:1rem;">Opening Hours</h3>
+        <div class="hours-list">
+          <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">7:00 AM – 7:00 PM</span></div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.5!2d144.3475!3d-38.1985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad4156b8ef0e3e7%3A0x0!2s9+Loris+Cl%2C+Grovedale+VIC+3216!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lavelle Landscapes location on Google Maps"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="section-narrow">
+    <div class="section-header">
+      <div class="section-label"><i class="fas fa-circle"></i> Get Started</div>
+      <h2>Ready to Transform Your Outdoor Space?</h2>
+      <p>Get in touch with Jaryd today for a no-obligation chat and free on-site quote.</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-cta-box">
+        <h3>Let's Talk About Your Project</h3>
+        <p>The easiest way to get started is to give Jaryd a call. He'll have a chat about what you're after and arrange a time to come out and take a look — no pressure, no obligation.</p>
+        <a href="tel:0458176386" class="call-btn"><i class="fas fa-phone"></i> Call Jaryd on 0458 176 386</a>
+        <div class="contact-details">
+          <div class="contact-detail-row"><i class="fas fa-location-dot"></i> 9 Loris Cl, Grovedale VIC 3216, Australia</div>
+          <div class="contact-detail-row"><i class="fas fa-phone"></i> 0458 176 386</div>
+          <div class="contact-detail-row"><i class="fas fa-clock"></i> Open 7 Days — 7:00 AM to 7:00 PM</div>
+        </div>
+      </div>
+      <form class="contact-form" action="mailto:info@lavellelandscapes.com.au" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="e.g. jane@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 0412 345 678">
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us About Your Project</label>
+          <textarea id="message" name="message" placeholder="What are you looking to have done? Any details help us prepare a more accurate quote." required></textarea>
+        </div>
+        <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Request a Free Quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Lavelle Landscapes and Constructions</div>
+      <p>Premium landscaping, paving, and outdoor construction across Geelong, the Bellarine, and the Surf Coast. Led by Jaryd — a hands-on tradesman who genuinely cares about getting every detail right.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <div class="footer-links">
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#process">Our Process</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contact Info</h4>
+      <div class="footer-contact-item"><i class="fas fa-location-dot"></i> 9 Loris Cl, Grovedale VIC 3216</div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i> <a href="tel:0458176386">0458 176 386</a></div>
+      <div class="footer-contact-item"><i class="fas fa-clock"></i> Open 7 Days, 7 AM – 7 PM</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Lavelle Landscapes and Constructions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', function() {
+  this.classList.toggle('active');
+  mobileNav.classList.toggle('open');
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('open');
+  });
+});
+
+// Navbar shadow on scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(function(button) {
+  button.addEventListener('click', function() {
+    const item = this.parentElement;
+    const isActive = item.classList.contains('active');
+    
+    // Close all items
+    document.querySelectorAll('.faq-item').forEach(function(faq) {
+      faq.classList.remove('active');
+      faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    
+    // Open clicked if it wasn't active
+    if (!isActive) {
+      item.classList.add('active');
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
